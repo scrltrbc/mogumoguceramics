@@ -1,0 +1,74 @@
+nav{
+    --latime-buton: 120px;
+    --inaltime-buton: 30px;
+    background-color: var(--contur-light);
+}
+
+ul.meniu, ul.meniu  ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.text-icon, .imag-icon{
+    display: inline-block;
+}
+
+ul.meniu{
+    display: flex;
+    position: relative;
+    z-index:17;
+}
+
+
+ul.meniu ul{
+    display: none;
+    animation: animatie_submeniu 0.1s linear;
+    transform-origin: center left;
+}
+
+ul.meniu li:hover ul{
+    display: block;
+    position: absolute;
+    z-index: 17;
+}
+
+@keyframes animatie_submeniu{
+    0%{
+        opacity: 0;
+        transform: scale(0,0);
+    }
+    50%{
+        transform: scale(0.5,1);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1,1);
+    }
+}
+
+ul.meniu li{
+    cursor: pointer;
+    font-weight:bold;
+    width:var(--latime-buton);
+    height:var(--inaltime-buton);
+    background-color: var(--fundal-light);
+    border: 1px solid var(--contur-light);
+    color: var(--heading-light);
+    text-align: center;
+    line-height: var(--inaltime-buton);
+    text-decoration: none;
+    transition: all 0.25s linear;
+}
+
+ul.meniu li a{
+    text-decoration: none;
+    color:inherit;
+    display: block;
+    height:100%;
+}
+
+ul.meniu li:hover{
+    color:var(--heading-dark);
+    background-color: var(--fundal-dark);
+}
