@@ -1,0 +1,32 @@
+nav {
+  perspective: 800px;
+}
+#hamburger{
+  display: block;
+}
+
+ul.meniu {
+  display: block;
+
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  transform: rotateZ(-90deg);
+  transform-origin: left;
+
+  opacity: 0;
+
+  transition: transform 0.5s ease, opacity 0.5s ease;
+
+  pointer-events: none;
+  backface-visibility: hidden;
+}
+
+#ch-menu:checked + ul.meniu {
+  transform: rotateZ(0deg);
+  opacity: 1;
+
+  pointer-events: auto;
+}
