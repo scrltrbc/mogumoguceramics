@@ -1,0 +1,38 @@
+{
+  "name": "mogumoguceramics",
+  "version": "1.0.0",
+  "description": "magazin online de produse din ceramica",
+  "keywords": [
+    "mogumoguceramics",
+    "ceramica",
+    "produse",
+    "din",
+    "ceramica",
+    "handmade",
+    "vaze",
+    "vaza",
+    "vaza",
+    "din",
+    "ceramica"
+  ],
+  "homepage": "https://github.com/scrltrbc/mogumoguceramics#readme",
+  "bugs": {
+    "url": "https://github.com/scrltrbc/mogumoguceramics/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/scrltrbc/mogumoguceramics.git"
+  },
+  "license": "ISC",
+  "author": "Scarlat Rebeca",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "ejs": "^5.0.1",
+    "express": "^5.2.1",
+    "sass": "^1.98.0"
+  }
+}

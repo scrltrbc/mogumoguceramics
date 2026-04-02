@@ -1,0 +1,25 @@
+#hamburger{
+    display: block;
+}
+
+ul.meniu{
+    display: none;
+}
+
+#ch-menu:checked+ul.meniu{
+    display: block;
+    width: 100%;
+    position: absolute;
+}
+
+input{
+    display: none;
+}
+
+ul.meniu li{
+    width: 100%;
+}
+
+ul.meniu ul{
+    width: 100%;
+}
