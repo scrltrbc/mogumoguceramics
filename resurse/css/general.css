@@ -1,3 +1,7 @@
+html{
+    margin: 0;
+    scroll-behavior: smooth;
+}
 body{
     --fundal-light:#FFEEF4;
     --fundal-dark:#8C538C;
@@ -10,7 +14,7 @@ body{
     --contur-light:#8C538C;
     --buton-light:#8C538C;
     --buton-hover-light:#F7E6EC;
-    --margine-pagina:100px;
+    --margine-pagina:50px;
     --l-font-size: 20px;
     --m-font-size: 18px;
     --s-font-size: 16px;
@@ -29,7 +33,7 @@ main{
     margin-right:var(--margine-pagina);
 }
 
-main > head{
+main > header{
     margin-left: 0;
     margin-right: 0;
 }
@@ -249,7 +253,7 @@ footer .icons i{
 
 @media screen and (max-width:1200px){
     body{
-        --margine-pagina:80px;
+        --margine-pagina:30px;
         font-size: var(--m-font-size);
     }
     #grid-pagina{
@@ -271,7 +275,7 @@ footer .icons i{
 
 @media screen and (max-width:700px){
     body{
-        --margine-pagina:50px;
+        --margine-pagina:20px;
         font-size: var(--l-font-size);
     }
     #grid-pagina{
