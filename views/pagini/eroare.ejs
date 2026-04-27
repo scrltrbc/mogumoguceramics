@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html  lang="ro">
+<head>
+    <title>mogumoguceramics - eroare</title>
+    <meta name="description" content="Istoricul si descrierea mogumoguceramics">
+    <meta name="keywords" content="ceramica, mogumoguceramics, vaze, flori, figurine">
+    <link rel="stylesheet" type="text/css" href="/resurse/css/eroare.css">
+    <%- include('../fragmente/head') %>
+</head>
+
+<body>
+
+<%- include('../fragmente/header')  %>
+
+<main>
+    <div id="err-coloane">
+        <div id="err-imag">
+            <img src="<%- locals.imagine %>" />
+        </div>
+        <section>
+            <h2><%- locals.titlu %></h2>
+            <p><%- locals.text %></p>
+        </section>
+    </div>
+</main>
+
+<%- include('../fragmente/footer');  %>
+
+
+</body>
+</html>
