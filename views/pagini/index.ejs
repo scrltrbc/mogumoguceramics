@@ -9,14 +9,13 @@
        figurina ceramica, ceramic trinkets">
     <meta name="description" content="mogumoguceramics ofera creatii lucrate si pictate manual din ceramica">
     <%- include("../fragmente/head") %>
+    <link rel="stylesheet" href="/resurse/css/galerie.css">
     <script id="MathJax-script" async
             src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
     </script>
 </head>
 <body>
-<header>
     <%- include("../fragmente/header") %>
-</header>
 <main>
     <div id="grid-pagina">
         <section id="welcome">
@@ -35,6 +34,7 @@
             <blockquote>„Nu am vrut să sculptez pasărea, am vrut să sculptez zborul.”</blockquote>
             <p class="intro">mogumoguceramics este un artist autohton ce se indeletniceste cu
                 mestesugul ceramicii, sculptand, pictand si finisand operele sale.</p>
+            <hr class="hr-zigzag">
             <section id="promotii">
                 <h3>Promoții și oferte</h3>
                 <article>
@@ -66,10 +66,11 @@
                     </p>
                 </article>
             </section>
-            <div id="stadiusite">
-                <h2>Nivelul de completare a site-ului</h2>
-                <meter id="sitecomplet" min="0" max="14" low="5" high="10" optimum="12" value="1"></meter>
-                1/14
+            <div id="stadiu-site">
+                <div id="container-reflexie"><div id="text">Nivelul de completare a site-ului
+                <div id="text-reflectat">Nivelul de completare a site-ului</div></div></div>
+                <meter id="site-complet" min="0" max="8" low="3" high="5" optimum="6" value="5"></meter>
+                5/8
             </div>
             <div id="dv-prezentare-1">
                 <div id="dv-prezentare">
@@ -93,132 +94,6 @@
                     </figure>
                 </div>
             </div>
-        </section>
-        <section id="produse">
-            <h2>Produsele noastre</h2>
-            <section id="vaze">
-                <h3>Vaze</h3>
-                <figure>
-                    <figcaption>Set de 3 vaze</figcaption>
-                    <img src="/resurse/imagini/produse/vazejysk.jpeg" title="Set 3 vaze" style="width:50%; height:50%;"
-                         alt="set3vaze">
-                </figure>
-            </section>
-            <section id="flori">
-                <h3>Flori</h3>
-                <figure>
-                    <figcaption>Buchet roz</figcaption>
-                    <img src="/resurse/imagini/produse/roz1.jpeg" title="Buchet roz" style="width:50%; height:50%;"
-                         alt="buchet roz">
-                </figure>
-                <figure>
-                    <figcaption>Buchet complementar</figcaption>
-                    <img src="/resurse/imagini/produse/movgalben1.jpeg" title="Buchet complementar"
-                         style="width:50%; height:50%;" alt="buchet complementar"></figure>
-                <figure>
-                    <figcaption>Buchet violet</figcaption>
-                    <img src="/resurse/imagini/produse/nasu1.jpeg" title="Buchet violet" style="width:50%; height:50%;"
-                         alt="buchet violet"></figure>
-            </section>
-            <section id="figurine">
-                <h3>Figurine</h3>
-                <figure>
-                    <figcaption>Figurina Clovn</figcaption>
-                    <img src="/resurse/imagini/produse/euclovn.jpeg" title="Clovn" style="width:50%; height:50%;"
-                         alt="figurina clovn"></figure>
-            </section>
-            <section id="brelocuri">
-                <h3>Brelocuri</h3>
-                <figure>
-                    <figcaption>Breloc <i>MyMelody</i></figcaption>
-                    <img src="/resurse/imagini/produse/mymelo2.jpeg" title="Breloc MyMelody"
-                         style="width:50%; height:50%;"
-                         alt="breloc"></figure>
-                <figure>
-                    <figcaption>Breloc <i>Cristi</i></figcaption>
-                    <img src="/resurse/imagini/produse/cristi2.jpeg" title="Breloc Cristi"
-                         style="width:50%; height:50%;"
-                         alt="breloc"></figure>
-            </section>
-            <section id="index-intrebari">
-                <h2>Întrebări frecvente</h2>
-                <details>
-                    <summary>Din ce sunt confecționate produsele dumneavoastră?</summary>
-                    <p>Toate produsele noastre sunt confecționate din lut cu uscare la aer furnizat de <a
-                                href="https://www.profiart.ro/lut-si-pasta-de-modelaj">PictorShop</a></p>
-                </details>
-                <details>
-                    <summary>Cât de satisfăcuți sunt clienții dumneavoastră în medie?</summary>
-                    <p>
-                        <meter id="satisfactie" min="0" max="5" low="2" high="4" optimum="4.5" value="5"></meter>
-                        5⭐/5
-                    </p>
-                </details>
-                <details>
-                    <summary>Unde este comanda mea?</summary>
-                    <p>Livrările noastre se realizează prin intermediul <a href="https://sameday.ro"
-                                                                           target="curier">Sameday</a> <br>
-                        Pentru a verifica statusul comenzii tale poți apăsa <a href="https://sameday.ro#awb_tracker"
-                                                                               target="awbtrack">aici</a>. <br>
-                        Pentru comenzile de oriunde din țară perioada de livrare este între 2-5 zile lucrătoare. <br>
-                        Pentru comenzile din afara țării perioada de livrare este între 7-14 zile lucrătoare.</p>
-                </details>
-            </section>
-            <section id="tutorial">
-                <h2>Retete</h2>
-                <p>Dacă doriți să vă faceți singuri propriile creații (dar de ce ati face asta când ne aveți pe noi???)
-                    vă recomandăm următoarele tutoriale, să vedeți cât e de <s>ușor</s> să le
-                    faceți,
-                    să vă dați în final bătuți și să veniți să cumpărați de la noi &#128512;. Mulțumim! &#128513;</p>
-                <div class="container-iframe">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/ILMBPSMIRu8?si=jgh8-5mJD3JNUoA6"
-                            name="ifr-video" title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    <div class="taburi-iframe">
-                        <a href="https://www.youtube.com/embed/ILMBPSMIRu8?si=jgh8-5mJD3JNUoA6"
-                           target="ifr-video">Tutorial</a>
-                        <a href="https://www.youtube.com/embed/dsJtgmAhFF4" target="ifr-video">Reteta tort ciocolata</a>
-                        <a href="https://www.youtube.com/embed/Wtxbt-CpA2s" target="ifr-video">Reteta tort
-                            căpșuni</a><br/>
-                    </div>
-                </div>
-            </section>
-            <section id="video">
-                <video id="video-vtt" controls preload="metadata" poster="/resurse/imagini/mogumogutransparent.png">
-                    <source src="/resurse/video/Chocolate.mp4" type="video/mp4">
-                    <source src="/resurse/video/Chocolate.ogv" type="video/ogv">
-
-                    <track src="/resurse/video/tracks/captions-ciocolata.vtt" kind="subtitles" srclang="ro" label="Română" default>
-                    <track src="/resurse/video/tracks/captions-ciocolata-en.vtt" kind="subtitles" srclang="en" label="English">
-                </video>
-            </section>
-            <section id="galerie-statica">
-                <h2>Galerie</h2>
-                <div id="grid-galerie">
-                    <figure>
-                        <div>
-                            <img src="/resurse/imagini/produse/fluorescent.jpeg" style="width:50%; height: auto;"
-                                 alt="briose">
-                        </div>
-
-                        <figcaption>Briose</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="/resurse/imagini/produse/puzderieviolet.jpeg" style="width:50%; height: auto;"
-                             alt="briose">
-                        <figcaption>Briose</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="/resurse/imagini/produse/proces1.jpeg" style="width:50%; height: 50%;" alt="briose">
-                        <figcaption>Briose</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="/resurse/imagini/produse/proces2.jpeg" style="width:50%; height: 50%;" alt="briose">
-                        <figcaption>Briose</figcaption>
-                    </figure>
-                </div>
-            </section>
         </section>
         <section id="orar">
             <h2>Orar</h2>
@@ -338,9 +213,65 @@
             <h2>Site și Server</h2>
             <p>"Lorem ipsum"</p>
         </section>
+        <section id="produse">
+            <section id="index-intrebari">
+                <h2>Întrebări frecvente</h2>
+                <details>
+                    <summary>Din ce sunt confecționate produsele dumneavoastră?</summary>
+                    <p>Toate produsele noastre sunt confecționate din lut cu uscare la aer furnizat de <a
+                                href="https://www.profiart.ro/lut-si-pasta-de-modelaj">PictorShop</a></p>
+                </details>
+                <details>
+                    <summary>Cât de satisfăcuți sunt clienții dumneavoastră în medie?</summary>
+                    <p>
+                        <meter id="satisfactie" min="0" max="5" low="2" high="4" optimum="4.5" value="5"></meter>
+                        5⭐/5
+                    </p>
+                </details>
+                <details>
+                    <summary>Unde este comanda mea?</summary>
+                    <p>Livrările noastre se realizează prin intermediul <a href="https://sameday.ro"
+                                                                           target="curier">Sameday</a> <br>
+                        Pentru a verifica statusul comenzii tale poți apăsa <a href="https://sameday.ro#awb_tracker"
+                                                                               target="awbtrack">aici</a>. <br>
+                        Pentru comenzile de oriunde din țară perioada de livrare este între 2-5 zile lucrătoare. <br>
+                        Pentru comenzile din afara țării perioada de livrare este între 7-14 zile lucrătoare.</p>
+                </details>
+            </section>
+            <section id="tutorial">
+                <h2>Retete</h2>
+                <p>Dacă doriți să vă faceți singuri propriile creații (dar de ce ati face asta când ne aveți pe noi???)
+                    vă recomandăm următoarele tutoriale, să vedeți cât e de <s>ușor</s> să le
+                    faceți,
+                    să vă dați în final bătuți și să veniți să cumpărați de la noi &#128512;. Mulțumim! &#128513;</p>
+                <div class="container-iframe">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/ILMBPSMIRu8?si=jgh8-5mJD3JNUoA6"
+                            name="ifr-video" title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <div class="taburi-iframe">
+                        <a href="https://www.youtube.com/embed/ILMBPSMIRu8?si=jgh8-5mJD3JNUoA6"
+                           target="ifr-video">Tutorial</a>
+                        <a href="https://www.youtube.com/embed/dsJtgmAhFF4" target="ifr-video">Reteta tort ciocolata</a>
+                        <a href="https://www.youtube.com/embed/Wtxbt-CpA2s" target="ifr-video">Reteta tort
+                            căpșuni</a><br/>
+                    </div>
+                </div>
+            </section>
+            <section id="video">
+                <video id="video-vtt" controls preload="metadata" poster="/resurse/imagini/mogumogutransparent.png">
+                    <source src="/resurse/video/Chocolate.mp4" type="video/mp4">
+                    <source src="/resurse/video/Chocolate.ogv" type="video/ogv">
+
+                    <track src="/resurse/video/tracks/captions-ciocolata.vtt" kind="subtitles" srclang="ro" label="Română" default>
+                    <track src="/resurse/video/tracks/captions-ciocolata-en.vtt" kind="subtitles" srclang="en" label="English">
+                </video>
+            </section>
+            <%- include("../fragmente/galerie")%>
+        </section>
     </div>
 
 </main>
-<%- include("../fragmente/footer")%>>
+<%- include("../fragmente/footer")%>
 </body>
 </html>

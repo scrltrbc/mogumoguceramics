@@ -31,7 +31,7 @@ ul.meniu, ul.meniu ul {
   height: var(--inaltime-buton);
   background-color: var(--buton-light);
   border: 1px solid var(--buton-light);
-  color: var(--text-dark);
+  color: var(--text-dark) !important;
   text-align: center;
   line-height: var(--inaltime-buton);
   text-decoration: none;
@@ -74,17 +74,6 @@ ul.meniu {
 
 }
 
-ul.submeniu{
-  display: none;
-  animation: animatie_submeniu 0.25s linear;
-  transform-origin: center;
-  li{
-    @extend %buton-meniu;
-    }
-
-}
-
-
 @keyframes animatie_submeniu{
   0% {
     opacity: 0;
@@ -108,15 +97,47 @@ ul.meniu > li:hover ul {
 }
 
 
-ul.meniu a {
+ul.meniu a,
+ul.meniu a:link,
+ul.meniu a:visited{
   text-decoration: none;
-  color: inherit;
+  color: var(--text-dark) !important;
   display: block;
   width: 100%;
   height: 100%;
 }
+ul.meniu a:hover,
+{
+  color: var(--text-light) !important;
+}
 
-ul.meniu li:hover {
+ul.meniu>li:hover {
   background-color: var(--buton-hover-light);
-  color: var(--text-light);
+  color: var(--text-light) !important;
+  >a{
+    color: var(--text-light) !important;
+  }
+}
+
+ul.submeniu {
+  display: none;
+  animation: animatie_submeniu 0.25s linear;
+  transform-origin: center;
+
+  >li {
+    @extend %buton-meniu;
+    &:hover {
+      background-color: var(--buton-hover-light);
+      color: var(--text-light) !important;
+    }
+
+  }
+
+  a {
+    color: var(--text-dark) !important;
+    &:hover {
+      color: var(--text-light);
+    }
+
+  }
 }

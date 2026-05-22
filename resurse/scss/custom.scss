@@ -5,8 +5,8 @@ $secondary: #89C7BD;
 $body-bg: #FFEEF4;
 $body-color: #8C538C;
 
-$font-family-base: "Bodoni Moda", serif;
-
+$font-family-base: "Times New Roman", serif;
+$font-family-title: "Bodoni Moda", serif;
 
 $h1-font-size: 2.8rem;
 $h2-font-size: 2.2rem;
@@ -19,7 +19,7 @@ $border-radius: 1rem;
 $grid-breakpoints: (
         xs: 0,
         sm: 576px,
-        md: 900px,
+        md: 700px,
         lg: 1200px,
         xl: 1400px
 );
@@ -83,7 +83,7 @@ a {
 
 ::selection {
   background: var(--secundar-light);
-  color: var(--text-dark);
+  color: var(--text-light);
 }
 
 .text-coloane {
@@ -110,20 +110,6 @@ a {
   }
 }
 
-@keyframes bg-change {
-  0% { background-image: url("/resurse/imagini/bg1.jpg"); }
-  50% { background-image: url("/resurse/imagini/bg2.png"); }
-  100% { background-image: url("/resurse/imagini/bg1.jpg"); }
-}
-
-.bg-animat {
-  background-attachment: fixed;
-  background-size: cover;
-  animation: bg-change 10s infinite;
-}
-body.bg-animat {
-  background-color: transparent;
-}
 .table-responsive-custom {
   overflow-x: auto;
 }

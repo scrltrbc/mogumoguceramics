@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html  lang="ro">
+<head>
+    <meta name="description" content="Cofetaria Dulcelind ofera prajituri, torturi, produse de patiserie cu optiunea de achizitie online si livrare prin curier.">
+    <meta name="keywords" content="cofetarie, Dulcelind, prajituri, torturi, dulce, pateuri, produse,<%- locals.prod.nume %>">
+
+    <title>Cofetăria Dulcelind - <%- locals.prod.nume %></title>
+    <%- include("../fragmente/head") %>
+    <link href="/resurse/css/produs.css" type="text/css" rel="stylesheet" />
+</head>
+
+<%- include("../fragmente/header") %>
+<main>
+    <section>
+        <h2>Pagină produs</h2>
+        <article
+                id="articol_<%- prod.id %>"
+                class="produs <%- prod.categorie %>">
+
+            <h3>
+                <a href="/produs/<%- prod.id %>">
+                    <%- prod.denumire %>
+                </a>
+            </h3>
+
+            <p class="categorie">
+                <%- prod.categorie %>
+            </p>
+
+            <div class="container-produs">
+
+                <p class="descriere">
+                    <%- prod.descriere %>
+                </p>
+
+                <img src="/resurse/imagini/produse/<%- prod.imagine %>">
+
+            </div>
+
+            <ul>
+                <li>Pret: <span class="val-pret"><%- prod.pret %></span></li>
+
+                <li>Dimensiune: <%- prod.dimensiuni %> cm</li>
+
+                <li>Culoare: <%- prod.culoare %></li>
+
+                <li>Materiale: <%- prod.materiale %></li>
+
+                <li>
+                    <time datetime="<%- prod.data_adaugare.toISOString() %>">
+                        <%- prod.data_adaugare %>
+                    </time>
+                </li>
+
+                <li>
+                    Personalizabil:
+                    <%- prod.personalizabil ? "Da" : "Nu" %>
+                </li>
+
+            </ul>
+
+        </article>
+
+    </section>
+</main>
+
+<%- include("../fragmente/footer") %>
+</body>
+</html>

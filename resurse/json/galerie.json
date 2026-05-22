@@ -2,40 +2,113 @@
   "cale_galerie":"resurse/imagini/galerie",
   "imagini": [
     {
-      "fisier":"briose-frisca.png",
-      "descriere":"Brioșe",
-      "luni":["martie","februarie","noiembrie","aprilie", "decembrie","octombrie"]
+      "fisier":"buchetprimavara1.jpg",
+      "titlu":"Un buchet de primăvară",
+      "alt":"Buchet de primăvară",
+      "descriere":"Lalele, margarete și alte floricele",
+      "luni":["martie","aprilie","mai"]
     },
     {
-      "fisier":"clatite.png",
-      "descriere":"Clătite cu dulceață",
-      "luni":["ianuarie","februarie","iunie","octombrie"]
+      "fisier":"buchetprimavara2.jpg",
+      "titlu":"Un buchet de primăvară",
+      "alt": "Buchet de primăvară",
+      "descriere":"Margarete, lalele și alte floricele",
+      "luni":["martie","aprilie","mai"]
 
     },
     {
-      "fisier":"gogosi.png",
-      "descriere":"Gogoși glazurate",
-      "luni":["ianuarie","noiembrie","iunie","martie","aprilie"]
+      "fisier":"buchetprimavara3.jpg",
+      "titlu":"Un buchet de primăvară",
+      "alt": "Buchet de primăvară",
+      "descriere":"Un buchet de primăvară",
+      "luni":["martie","aprilie","mai"]
     },
     {
-      "fisier":"tort-scortisoara.png",
-      "descriere":"Tort cu scorțisoară",
-
-      "luni":["noiembrie","aprilie", "decembrie"]
+      "fisier":"fluorescent.jpg",
+      "titlu":"Lumina florilor",
+      "alt": "Flori ce strălucesc în întuneric",
+      "descriere":"S-a utilizat o vopsea specială",
+      "luni":["februarie", "decembrie", "ianuarie"]
     },
     {
-      "fisier":"prajitura-ciocolata.png",
-      "descriere":"Prăjitură cu ciocolată",
-
-      "luni":["noiembrie","aprilie", "decembrie","octombrie"]
+      "fisier":"lumanare.jpg",
+      "titlu":"Ioana",
+      "alt": "Un suport de lumânare",
+      "descriere":"Suport de lumânare",
+      "luni":["februarie", "decembrie", "ianuarie"]
     },
     {
-      "fisier":"tarta-afine.png",
-      "descriere":"Tartă cu afine"
+      "fisier":"lumanare2.jpg",
+      "titlu":"Ioana lumânarea",
+      "alt": "Un suport de lumânare",
+      "descriere":"Suport de lumânare",
+      "luni":["februarie", "decembrie", "ianuarie"]
     },
     {
-      "fisier":"tort-trandafiri.png",
-      "descriere":"Tort special"
-    }
+      "fisier":"lumanare3.jpg",
+      "titlu":"Ioana-suport de lumânare",
+      "alt": "Un suport de lumânare",
+      "descriere":"Suport de lumânare",
+      "luni":["septembrie", "octombrie", "noiembrie"]
+    },
+    {
+      "fisier":"lumanare4.jpg",
+      "titlu":"Suport de lumânare Ioana",
+      "alt": "Un suport de lumânare",
+      "descriere":"Suport de lumânare",
+      "luni":["septembrie", "octombrie", "noiembrie"]
+    },
+    {
+      "fisier":"soarezoom.jpg",
+      "titlu":"Buchet de vară",
+      "alt": "Un buchet cu floarea soarelui",
+      "descriere":"Toamna",
+      "luni":["septembrie", "octombrie", "noiembrie"]
+    },
+    {
+      "fisier":"soarecentru.jpg",
+      "titlu":"Buchet de vară",
+      "alt": "Un buchet cu floarea soarelui",
+      "descriere":"Toamna",
+      "luni":["iunie", "iulie", "august"]
+    },
+    {
+      "fisier":"soareafara.jpg",
+      "titlu":"Buchet de vară",
+      "alt": "Un buchet cu floarea soarelui",
+      "descriere":"Toamna",
+      "luni":["iunie", "iulie", "august"]
+    },
+    {
+      "fisier":"soarecool.jpg",
+      "titlu":"Buchet de vară",
+      "alt": "Un buchet cu floarea soarelui",
+      "descriere":"Toamna",
+      "luni":["iunie", "iulie", "august"]
+    },
+    {
+      "fisier":"nasu1.jpg",
+      "titlu":"Buchet violet",
+      "alt": "Un buchet chic",
+      "descriere":"O vază stilată",
+      "luni":["ianuarie", "februarie", "martie", "aprilie", "mai", "iunie", "iulie", "august", "septembrie", "octombrie", "noiembrie"]
+    },
+    {
+      "fisier":"mymelo1.jpg",
+      "titlu":"Breloc MyMelo",
+      "alt": "Un breloc cu MyMelody",
+      "descriere":"Un breloc drăguț",
+      "luni":["ianuarie", "februarie", "martie", "aprilie", "mai", "iunie", "iulie", "august", "septembrie", "octombrie", "noiembrie"]
+    },
+    {
+      "fisier":"imprumutat.jpg",
+      "titlu":"Cort",
+      "alt": "Ceramica naturii",
+      "descriere":"Un cort din ceramică în natură",
+      "luni":["ianuarie", "februarie", "martie", "aprilie", "mai", "iunie", "iulie", "august", "septembrie", "octombrie", "noiembrie"],
+      "licenta":"CC-BY 4.0",
+      "autor":"Wonderlane",
+      "sursa":"https://www.flickr.com/photos/wonderlane/"
+   }
   ]
 }
