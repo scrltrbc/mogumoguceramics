@@ -1,0 +1,90 @@
+#banner{
+    display:none;
+}
+
+@media print {
+
+    img, video, iframe, figure, .container-iframe, .icons {
+        display: none !important;
+    }
+
+    #link-top {
+        display: none !important;
+    }
+
+    #grid-pagina {
+        display: block !important;
+    }
+
+    a {
+        color: black !important;
+        text-decoration: none !important;
+    }
+
+    h1 {
+        order: -1;
+        text-align: center;
+    }
+
+    nav ul {
+        display: block !important;
+    }
+
+    nav ul ul {
+        display: none !important;
+    }
+
+    nav ul li {
+        display: list-item;
+        list-style-type: disc;
+        margin-left: 20px;
+    }
+
+    nav {
+        page-break-after: always;
+    }
+
+    footer {
+        page-break-before: always;
+    }
+
+    #banner {
+        display: block !important;
+        position: absolute;
+        bottom:0;
+        width: 70%;
+        margin: 0 auto;
+        text-align: center;
+        border: 4px inset black;
+    }
+
+    body::after {
+        content: "Scarlat \A Rebeca Cristiana"; /* modifică cu numele tău */
+        white-space: pre;
+
+        position: fixed;
+        bottom: 0;
+        right: 0;
+
+        width: 4cm;
+        height: 1cm;
+
+        border: 3px solid black;
+        border-radius: 10px;
+
+        text-align: center;
+        font-weight: bold;
+
+        opacity: 0.4;
+    }
+
+    @page:left {
+        margin-left: 3cm;
+        margin-right: 1cm;
+    }
+
+    @page:right {
+        margin-right: 3cm;
+        margin-left: 1cm;
+    }
+}

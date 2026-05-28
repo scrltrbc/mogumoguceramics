@@ -1,0 +1,49 @@
+<h2>Galerie</h2>
+<section class="galerie-statica">
+
+    <% imagini.forEach(function(img){ %>
+
+        <figure>
+
+            <picture>
+
+                <source
+                        media="(max-width:700px)"
+                        srcset="<%= img.fisier_mic %>">
+
+                <source
+                        media="(max-width:1200px)"
+                        srcset="<%= img.fisier_mediu %>">
+
+                <img
+                        src="<%= img.fisier %>"
+                        alt="<%= img.alt || img.titlu %>"
+                        title="<%= img.descriere %>">
+
+            </picture>
+
+            <figcaption>
+                <%= img.titlu %> -
+                <%= img.descriere %>
+                <% if(img.licenta && img.licenta.includes("CC-BY")) { %>
+
+                    <div class="atribuire">
+                        Foto:
+                        <%= img.autor %>
+
+                        -
+                        <a href="<%= img.sursa %>" target="_blank">
+                            sursa
+                        </a>
+
+                        -
+                        <%= img.licenta %>
+                    </div>
+                <% } %>
+            </figcaption>
+
+        </figure>
+
+    <% }) %>
+
+</section>

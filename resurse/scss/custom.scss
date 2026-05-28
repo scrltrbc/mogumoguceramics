@@ -1,0 +1,132 @@
+@use "sass:color";
+
+$primary: #8C538C;
+$secondary: #89C7BD;
+$body-bg: #FFEEF4;
+$body-color: #8C538C;
+
+$font-family-base: "Times New Roman", serif;
+$font-family-title: "Bodoni Moda", serif;
+
+$h1-font-size: 2.8rem;
+$h2-font-size: 2.2rem;
+$h3-font-size: 1.8rem;
+
+
+$border-radius: 1rem;
+
+
+$grid-breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 700px,
+        lg: 1200px,
+        xl: 1400px
+);
+
+$btn-border-radius:10px;
+$btn-border-width: 2px;
+$btn-font-weight: 700;
+$btn-padding-y: 0.5rem;
+$btn-padding-x: 1rem;
+
+$form-range-thumb-width: 1.5rem;
+$form-range-thumb-height: 1.5rem;
+$form-range-thumb-border: 2px solid black;
+$form-range-thumb-border-radius: 1rem;
+$form-range-track-bg: #e9ecef;
+$form-range-track-height: 0.5rem;
+
+$form-floating-label-opacity: 0.7;
+$form-floating-input-padding-t: 1.625rem;
+$form-floating-input-padding-b: 0.625rem;
+
+$box-shadow: 0 0 10px rgba(0,0,0,0.2);
+
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+html {
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  --fundal: #FFEEF4;
+  --fundal-dark: #8C538C;
+  --text: #8C538C;
+  --text-buton: #FFE3F4;
+  --heading: #8a428e;
+  --heading-dark: #FFEEF4;
+  --secundar: #C9F0EB;
+  --secundar-dark: #89C7BD;
+  --contur: #8C538C;
+  --buton: #8C538C;
+  --buton-hover: #F7E6EC;
+  --margine-pagina: 50px;
+  --l-font-size: 20px;
+  --m-font-size: 18px;
+  --s-font-size: 16px;
+
+  background-color: var(--fundal);
+  color: var(--text);
+  font-size: var(--s-font-size);
+}
+
+
+.container {
+  max-width: none;
+  padding: 0;
+}
+
+img {
+  max-width: 50%;
+}
+
+a {
+  color: var(--heading) !important;
+}
+
+
+.theme-light {
+  background-color: var(--fundal);
+  color: var(--text);
+}
+
+.theme-dark {
+  background-color: var(--fundal-dark);
+  color: var(--text-buton);
+}
+
+::selection {
+  background: var(--secundar);
+  color: var(--text);
+}
+
+.text-coloane {
+  column-count: 3;
+  column-rule: 2px solid var(--contur);
+
+  @media (max-width: 900px) {
+    column-count: 1;
+  }
+}
+
+@keyframes scroll-text {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+.text-animat {
+  overflow: hidden;
+  white-space: nowrap;
+
+  span {
+    display: inline-block;
+    animation: scroll-text 10s linear infinite;
+  }
+}
+
+.table-responsive-custom {
+  overflow-x: auto;
+}

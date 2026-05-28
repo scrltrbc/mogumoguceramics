@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <title>Seturi de Produse - mogumoguceramics</title>
+    <%- include("../fragmente/head") %>
+    <style>
+        .card-set { border: 2px solid var(--text); border-radius: 15px; margin-bottom: 2rem; background: var(--text); }
+        .produs-in-set { transition: transform 0.2s; text-align: center; display: block; text-decoration: none; color: inherit; }
+        .produs-in-set:hover { transform: scale(1.05); color: var(--text); }
+        .img-set-produs { width: 100%; max-width: 120px; height: 120px; object-fit: cover; border-radius: 10px; }
+    </style>
+</head>
+<body>
+<%- include("../fragmente/header") %>
+
+<main class="container py-5">
+    <div class="text-center mb-5">
+        <h1 class="display-4 fw-bold text-center">Seturi Promoționale</h1>
+        <p class="lead">Cumpără la set și profiți de reduceri substanțiale calculate automat!</p>
+    </div>
+
+    <div class="row">
+        <% if (seturi.length === 0) { %>
+            <p class="text-center text-muted">Momentan nu sunt seturi configurate.</p>
+        <% } %>
+
+        <% for (let set of seturi) { %>
+            <div class="col-12">
+                <div class="card card-set p-4 shadow-sm">
+                    <div class="row align-items-center">
+                        <div class="col-md-4">
+                            <h3 class="fw-bold text-secondary"><%= set.nume %></h3>
+                            <p class="text-secondary"><%= set.descriere %></p>
+                            <div class="bg-primary-subtle p-3 rounded-3 border">
+                                <span class="text-decoration-line-through text-muted small"><%= set.sumaPreturi %> lei</span>
+                                <div class="fs-4 fw-bold text-danger"><%= set.pretFinal %> lei</div>
+                                <span class="badge bg-danger">Reducere inclusă: -<%= set.procentReducere %>%</span>
+                            </div>
+                        </div>
+
+                        <div class="col-md-8">
+                            <div class="row g-3 justify-content-center">
+                                <% for (let p of set.produse) { %>
+                                    <div class="col-6 col-sm-3">
+                                        <a href="/produs/<%= p.id %>" class="produs-in-set p-2 bg-primary-subtle rounded border shadow-xs h-100">
+                                            <img src="/resurse/imagini/produse/<%= p.imagine %>" class="img-set-produs mb-2" alt="<%= p.denumire %>">
+                                            <div class="small fw-bold text-truncate"><%= p.denumire %></div>
+                                            <div class="text-muted small"><%= p.pret %> lei</div>
+                                        </a>
+                                    </div>
+                                <% } %>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <% } %>
+    </div>
+</main>
+
+<%- include("../fragmente/footer") %>
+</body>
+</html>

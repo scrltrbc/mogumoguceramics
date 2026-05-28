@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html  lang="ro">
+<head>
+    <meta name="description" content="Cofetaria Dulcelind ofera prajituri, torturi, produse de patiserie cu optiunea de achizitie online si livrare prin curier.">
+    <meta name="keywords" content="cofetarie, Dulcelind, prajituri, torturi, dulce, pateuri, produse,<%- locals.prod.nume %>">
+
+    <title>Cofetăria Dulcelind - <%- locals.prod.nume %></title>
+    <%- include("../fragmente/head") %>
+    <link href="/resurse/css/produs.css" type="text/css" rel="stylesheet" />
+</head>
+
+<%- include("../fragmente/header") %>
+<main>
+    <section>
+        <h2>Pagină produs</h2>
+        <article
+                id="articol_<%- prod.id %>"
+                class="produs <%- prod.categorie %>">
+
+            <h3>
+                <a href="/produs/<%- prod.id %>">
+                    <%- prod.denumire %>
+                </a>
+            </h3>
+
+            <p class="categorie">
+                <%- prod.categorie %>
+            </p>
+
+            <div class="container-produs">
+
+                <p class="descriere">
+                    <%- prod.descriere %>
+                </p>
+
+                <img src="/resurse/imagini/produse/<%- prod.imagine %>">
+
+            </div>
+
+            <ul>
+                <li>Pret: <span class="val-pret"><%- prod.pret %></span></li>
+
+                <li>Dimensiune: <%- prod.dimensiuni %> cm</li>
+
+                <li>Culoare: <%- prod.culoare %></li>
+
+                <li>Materiale: <%- prod.materiale %></li>
+
+                <li>
+                    <time datetime="<%- prod.data_adaugare.toISOString() %>">
+                        <%- prod.data_adaugare %>
+                    </time>
+                </li>
+
+                <li>
+                    Personalizabil:
+                    <%- prod.personalizabil ? "Da" : "Nu" %>
+                </li>
+
+            </ul>
+
+        </article>
+
+    </section>
+
+    <section class="container my-5 border-top pt-4">
+        <h3 class="fw-bold mb-4">Acest produs face parte din următoarele seturi:</h3>
+
+        <% if (locals.seturiAsociate && seturiAsociate.length > 0) { %>
+            <div class="row">
+                <% for (let set of seturiAsociate) { %>
+                    <div class="col-12 col-md-6 mb-3">
+                        <div class="p-3 border rounded shadow-sm bg-light">
+                            <h4 class="text-primary fw-bold mb-1"><%= set.nume %></h4>
+                            <p class="small text-muted mb-2"><%= set.descriere %></p>
+                            <p class="fw-bold text-danger">Preț Set Promoțional: <%= set.pretFinal %> lei</p>
+
+                            <div class="d-flex flex-wrap gap-2 mt-2">
+                                <% for (let p of set.produse) { %>
+                                    <a href="/produs/<%= p.id %>" class="d-flex align-items-center bg-white p-2 border rounded text-decoration-none text-dark shadow-xs" style="width: calc(50% - 0.5rem); min-width: 140px;">
+                                        <img src="/resurse/imagini/produse/<%= p.imagine %>" alt="<%= p.denumire %>" style="width: 40px; height: 40px; object-fit: cover;" class="rounded me-2">
+                                        <span class="small fw-bold text-truncate"><%= p.denumire %></span>
+                                    </a>
+                                <% } %>
+                            </div>
+                        </div>
+                    </div>
+                <% } %>
+            </div>
+        <% } else { %>
+            <p class="text-muted italic">Acest produs nu este inclus în nicio ofertă de set momentan.</p>
+        <% } %>
+    </section>
+</main>
+
+<%- include("../fragmente/footer") %>
+</body>
+</html>

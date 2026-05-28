@@ -1,0 +1,40 @@
+{
+  "oferte": [
+    {
+      "categorie": "breloc",
+      "data-incepere": 1779735069458,
+      "data-finalizare": 1779735189458,
+      "reducere": 50
+    },
+    {
+      "categorie": "vaza",
+      "data-incepere": 1779734948132,
+      "data-finalizare": 1779735068132,
+      "reducere": 10
+    },
+    {
+      "categorie": "vesela",
+      "data-incepere": 1779734826866,
+      "data-finalizare": 1779734946866,
+      "reducere": 10
+    },
+    {
+      "categorie": "buchet",
+      "data-incepere": 1779734705582,
+      "data-finalizare": 1779734825582,
+      "reducere": 10
+    },
+    {
+      "categorie": "floare",
+      "data-incepere": 1779734584196,
+      "data-finalizare": 1779734704196,
+      "reducere": 30
+    },
+    {
+      "categorie": "vaza",
+      "data-incepere": 1779734462809,
+      "data-finalizare": 1779734582809,
+      "reducere": 20
+    }
+  ]
+}

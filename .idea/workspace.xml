@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ecd73080-700f-4c22-a835-f5cc697736d2" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="3A6W2FK9P6ePfjiFR0bXrqdld9X" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;JavaScript Debug.index.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.lab1tw.html.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Node.js.index.js.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;javascript.preferred.runtime.type.id&quot;: &quot;node&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/becbu/WebstormProjects/twlab/resurse/scss&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.fileTypes&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2025.3.3\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\becbu\WebstormProjects\twlab\resurse\scss" />
+      <recent name="C:\Users\becbu\WebstormProjects\twlab\resurse\imagini\produse" />
+      <recent name="C:\Users\becbu\WebstormProjects\twlab\views\pagini" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\becbu\WebstormProjects\twlab\resurse\imagini\galerie" />
+      <recent name="C:\Users\becbu\WebstormProjects\twlab\resurse\imagini" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-WS-253.31033.133" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ecd73080-700f-4c22-a835-f5cc697736d2" name="Changes" comment="" />
+      <created>1771913296309</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1771913296309</updated>
+      <workItem from="1771913297624" duration="5456000" />
+      <workItem from="1772011829394" duration="414000" />
+      <workItem from="1772034210620" duration="5569000" />
+      <workItem from="1772191546928" duration="207000" />
+      <workItem from="1772432891197" duration="4224000" />
+      <workItem from="1772448985379" duration="2760000" />
+      <workItem from="1772451787468" duration="37000" />
+      <workItem from="1772459966035" duration="6087000" />
+      <workItem from="1772790543457" duration="6751000" />
+      <workItem from="1772953288902" duration="11580000" />
+      <workItem from="1773034167126" duration="522000" />
+      <workItem from="1773039894405" duration="2830000" />
+      <workItem from="1773050310215" duration="2858000" />
+      <workItem from="1773065889298" duration="4955000" />
+      <workItem from="1773074956581" duration="1319000" />
+      <workItem from="1773655847268" duration="1528000" />
+      <workItem from="1773670411887" duration="6085000" />
+      <workItem from="1773827656323" duration="1529000" />
+      <workItem from="1774245067792" duration="7490000" />
+      <workItem from="1774258954560" duration="6571000" />
+      <workItem from="1774276107696" duration="4079000" />
+      <workItem from="1774600953334" duration="2369000" />
+      <workItem from="1775151531902" duration="9899000" />
+      <workItem from="1775409994598" duration="1624000" />
+      <workItem from="1775453057977" duration="3144000" />
+      <workItem from="1775465030801" duration="1353000" />
+      <workItem from="1775469236235" duration="1047000" />
+      <workItem from="1775479762336" duration="1197000" />
+      <workItem from="1776505901439" duration="410000" />
+      <workItem from="1776518214207" duration="5712000" />
+      <workItem from="1776594205286" duration="6449000" />
+      <workItem from="1776657278949" duration="9060000" />
+      <workItem from="1776668750906" duration="4460000" />
+      <workItem from="1777265904952" duration="4516000" />
+      <workItem from="1777306330828" duration="2817000" />
+      <workItem from="1777385720970" duration="71000" />
+      <workItem from="1778428740278" duration="6541000" />
+      <workItem from="1778490005514" duration="5687000" />
+      <workItem from="1778510868513" duration="8737000" />
+      <workItem from="1778929485617" duration="1858000" />
+      <workItem from="1778945056148" duration="17000" />
+      <workItem from="1779001165539" duration="19552000" />
+      <workItem from="1779081355494" duration="5022000" />
+      <workItem from="1779109836707" duration="4175000" />
+      <workItem from="1779341255254" duration="3292000" />
+      <workItem from="1779358348279" duration="6588000" />
+      <workItem from="1779427536833" duration="14811000" />
+      <workItem from="1779458354433" duration="6226000" />
+      <workItem from="1779646763428" duration="4565000" />
+      <workItem from="1779685757937" duration="39772000" />
+      <workItem from="1779979181242" duration="236000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

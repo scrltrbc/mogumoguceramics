@@ -1,0 +1,139 @@
+@charset "UTF-8";
+/* === STILURI PENTRU ZONA DE COMPARARE PRODUSE (BONUS 20) === */
+#zona-comparare {
+  margin: 1.5rem auto;
+  padding: 1.5rem;
+  background-color: var(--fundal);
+  border: 2px solid var(--contur);
+  border-radius: 18px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.5s ease, color 0.5s ease;
+  max-width: 1200px;
+}
+#zona-comparare h3 {
+  color: var(--heading);
+  margin-bottom: 1rem;
+  font-family: "Times New Roman", serif;
+  font-weight: bold;
+  border-left: 4px solid var(--secundar-dark);
+  padding-left: 10px;
+}
+#zona-comparare .produse-selectate {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  border: 1px dashed var(--secundar-dark);
+}
+body.dark #zona-comparare .produse-selectate {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+#zona-comparare {
+  /* Mini card-uri în interiorul barei de selectate */
+}
+#zona-comparare .mini-produs {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--text);
+  color: var(--text-buton);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: var(--s-font-size);
+  border: 1px solid var(--secundar-light);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+#zona-comparare .mini-produs .btn-elimina {
+  background: none;
+  border: none;
+  color: var(--secundar-light);
+  cursor: pointer;
+  font-weight: bold;
+  margin-left: 5px;
+  padding: 0 4px;
+  transition: color 0.2s ease;
+}
+#zona-comparare .mini-produs .btn-elimina:hover {
+  color: #ff6b6b;
+}
+#zona-comparare {
+  /* Tabelul de comparare propriu-zis */
+}
+#zona-comparare .tabel-comparare-wrapper {
+  overflow-x: auto;
+  margin-top: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+#zona-comparare .tabel-comparare {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--fundal);
+  text-align: center;
+}
+#zona-comparare .tabel-comparare th, #zona-comparare .tabel-comparare td {
+  padding: 12px 16px;
+  border: 1px solid var(--secundar-dark);
+  font-size: var(--m-font-size);
+  vertical-align: middle;
+}
+#zona-comparare .tabel-comparare {
+  /* Header-ul tabelului (Proprietate / Produs 1 / Produs 2) */
+}
+#zona-comparare .tabel-comparare thead th {
+  background-color: var(--text);
+  color: var(--text-buton);
+  font-weight: bold;
+  border-bottom: 3px solid var(--contur);
+}
+#zona-comparare .tabel-comparare {
+  /* Prima coloană (numele specificațiilor/caracteristicilor) */
+}
+#zona-comparare .tabel-comparare tbody tr td:first-child {
+  background-color: rgba(137, 199, 189, 0.15); /* nuanta din secundar-dark desaturat */
+  font-weight: bold;
+  color: var(--text);
+  text-align: left;
+  width: 20%;
+}
+#zona-comparare .tabel-comparare {
+  /* Rânduri alternate (Zebra striping adaptat temei) */
+}
+#zona-comparare .tabel-comparare tbody tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+body.dark #zona-comparare .tabel-comparare tbody tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+#zona-comparare .tabel-comparare {
+  /* Imagini în interiorul tabelului */
+}
+#zona-comparare .tabel-comparare .tabel-img {
+  max-width: 100px;
+  height: auto;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid var(--secundar-light);
+  margin: 0 auto;
+}
+#zona-comparare .tabel-comparare {
+  /* Evidențiere la hover pe rânduri */
+}
+#zona-comparare .tabel-comparare tbody tr:hover {
+  background-color: rgba(201, 240, 235, 0.3); /* nuanta din secundar-light */
+}
+body.dark #zona-comparare .tabel-comparare tbody tr:hover {
+  background-color: rgba(140, 83, 140, 0.4);
+}
+
+/* Stil pentru butonul global de declanșare comparare (dacă este cazul) sau mesaje */
+.text-alerta-comparare {
+  color: #ff6b6b;
+  font-weight: bold;
+  font-style: italic;
+  margin-top: 0.5rem;
+}

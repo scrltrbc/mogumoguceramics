@@ -1,0 +1,368 @@
+@charset "UTF-8";
+html {
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  --fundal: #FFEEF4;
+  --fundal-dark: #8C538C;
+  --text-light: #8C538C;
+  --text-dark: #FFE3F4;
+  --heading-light: #8a428e;
+  --heading-dark: #FFEEF4;
+  --secundar-light: #C9F0EB;
+  --secundar-dark: #89C7BD;
+  --contur-light: #8C538C;
+  --buton-light: #8C538C;
+  --buton-hover-light: #F7E6EC;
+  --margine-pagina: 50px;
+  --l-font-size: 20px;
+  --m-font-size: 18px;
+  --s-font-size: 16px;
+  background-color: var(--fundal);
+  color: var(--text-light);
+  font-size: var(--s-font-size);
+  transition: font-size 0.5s ease;
+}
+
+body.dark {
+  --fundal: #8C538C;
+}
+
+a {
+  color: var(--heading-light);
+}
+
+main {
+  margin-left: var(--margine-pagina);
+  margin-right: var(--margine-pagina);
+}
+main > header {
+  margin-left: 0;
+  margin-right: 0;
+}
+main a {
+  border: 1px solid transparent;
+  background-image: repeating-radial-gradient(ellipse, var(--buton-light) 0%, var(--buton-light) 40%, transparent 80%, transparent 100%);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 0 0;
+  transition: background-size 0.4s ease;
+}
+main a:hover {
+  background-size: 100% 100%;
+  color: var(--text-dark) !important;
+}
+main a:visited {
+  color: var(--secundar-dark) !important;
+}
+main a[href^=http]::before {
+  content: "⮳";
+  font-size: 1.5em;
+  margin-right: 0.3em;
+}
+main a[href^=http]:hover::before {
+  color: var(--secundar-light) !important;
+}
+main a[href^=http]:active {
+  border: 1px solid var(--heading-light);
+}
+
+div {
+  display: block;
+  unicode-bidi: isolate;
+}
+
+img {
+  max-width: 50%;
+  min-width: 10%;
+}
+
+figure {
+  margin: 0;
+}
+figure .fg-img > img {
+  width: 100vw;
+}
+
+.icons i {
+  color: var(--heading-light);
+}
+
+#welcome {
+  grid-area: welcome;
+}
+
+#site-server {
+  grid-area: site-server;
+}
+
+#anunturi {
+  grid-area: anunturi;
+}
+
+#orar {
+  grid-area: orar;
+}
+
+#statistici {
+  grid-area: statistici;
+}
+
+#utilizatori-online {
+  grid-area: utilizatori-online;
+}
+
+#produse {
+  grid-area: produse;
+}
+
+#calendar-evenimente {
+  grid-area: calendar-evenimente;
+}
+
+#grid-pagina {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-areas: "welcome welcome welcome" "calendar-evenimente orar anunturi" "utilizatori-online orar anunturi" "utilizatori-online statistici site-server" "produse produse produse";
+}
+#grid-pagina > * {
+  border: 1px solid var(--contur-light);
+  box-shadow: 0 0 5px var(--contur-light);
+  padding: 1vh;
+  gap: 10px;
+}
+
+#tab-orar {
+  border-collapse: collapse;
+}
+#tab-orar td {
+  border: 1px solid var(--contur-light);
+}
+#tab-orar th {
+  border: 1px solid var(--contur-light);
+}
+#tab-orar caption {
+  caption-side: bottom;
+  padding: 10px;
+  font-weight: bold;
+}
+#tab-orar thead > tr > th {
+  border: 3px solid var(--contur-light);
+}
+#tab-orar tbody > tr > td {
+  border: 1px solid var(--contur-light);
+}
+#tab-orar tbody tr {
+  transition: all 0.75s ease;
+}
+#tab-orar tbody tr:nth-child(even) {
+  color: var(--text-light);
+  box-shadow: inset 0 0 10px var(--secundar-light);
+}
+#tab-orar tbody tr:nth-child(even):hover {
+  background-color: var(--secundar-light);
+  font-size: 120%;
+}
+#tab-orar tbody tr:nth-child(odd) {
+  color: var(--secundar-dark);
+  box-shadow: inset 0 0 10px var(--contur-light);
+}
+#tab-orar tbody tr:nth-child(odd):hover {
+  background-color: var(--contur-light);
+  font-size: 120%;
+}
+
+#video-vtt {
+  width: 40%;
+  min-width: 300px;
+  max-width: 900px;
+  height: auto;
+  display: block;
+}
+#video-vtt::cue {
+  background: rgba(255, 255, 255, 0.3);
+  color: var(--text-light);
+  font-size: 1.1rem;
+}
+#video-vtt::cue(.intro) {
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+.container-iframe {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: center;
+  height: 25vw;
+  width: 50vw;
+}
+.container-iframe > iframe {
+  border: 3px solid var(--contur-light);
+  width: 100%;
+}
+
+.taburi-iframe > a {
+  display: inline-block;
+  justify-content: flex-end;
+  padding: 10px 10px;
+  color: var(--text-dark);
+  border: 1px solid var(--text-dark);
+  background-color: var(--buton-light);
+  text-decoration: none;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  cursor: pointer;
+  gap: 2px;
+  transition: all 0.25s linear;
+}
+.taburi-iframe > a:hover {
+  background-color: var(--buton-hover-light);
+  color: var(--text-light);
+  border: 3px solid var(--buton-light);
+}
+
+.titlusite {
+  font-family: "Bodoni Moda", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+footer {
+  background-color: var(--fundal-dark);
+  color: var(--text-dark) !important;
+}
+footer * {
+  color: var(--text-dark);
+  margin-left: 10px;
+}
+footer .icons i {
+  color: var(--text-dark);
+}
+footer a {
+  color: var(--text-dark) !important;
+}
+
+.tooltiptext {
+  display: none;
+}
+
+#cerc-punctat {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 5px dashed var(--buton-light);
+  background: radial-gradient(at 50% 50%, var(--fundal), var(--buton-light));
+  box-sizing: border-box;
+  transition: transform 0.5s ease;
+}
+
+#sageata {
+  position: relative;
+  z-index: 1;
+  color: var(--buton-light);
+  font-size: 2rem;
+  line-height: 1;
+}
+
+#link-top {
+  position: fixed;
+  bottom: 1em;
+  right: 0.75em;
+  width: 3rem;
+  height: 3rem;
+  opacity: 0.5;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+#link-top:hover {
+  opacity: 1;
+}
+#link-top:hover #cerc-punctat {
+  transform: rotate(90deg);
+}
+
+#text-reflectat {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  transform-origin: 0 0;
+  transform: rotateX(180deg) skew(-45deg) scaleY(0.5) translate(10px, -25px);
+  opacity: 0.55;
+  -webkit-mask-image: repeating-radial-gradient(ellipse at center, rgb(0, 0, 0) 0px, rgb(0, 0, 0) 8px, rgba(0, 0, 0, 0.2) 12px, rgb(0, 0, 0) 18px);
+  mask-image: repeating-radial-gradient(ellipse at center, rgb(0, 0, 0) 0px, rgb(0, 0, 0) 8px, rgba(0, 0, 0, 0.2) 12px, rgb(0, 0, 0) 18px);
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+}
+
+#container-reflexie:hover #text-reflectat {
+  animation: valuri 10s linear infinite;
+}
+
+@keyframes valuri {
+  0% {
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+  }
+  100% {
+    -webkit-mask-size: 250% 250%;
+    mask-size: 200% 200%;
+  }
+}
+#text {
+  position: relative;
+}
+
+#text, #text-reflectat {
+  font-size: 50px;
+  line-height: 50px;
+  font-weight: bold;
+}
+
+.hr-zigzag {
+  border: none;
+  height: 20px;
+  background: linear-gradient(-45deg, transparent 50%, var(--contur-light) 50%, var(--contur-light) 55%, transparent 55%), linear-gradient(45deg, transparent 50%, var(--contur-light) 50%, var(--contur-light) 55%, transparent 55%);
+  background-size: 20px 20px;
+  background-position: 0 10px, 0 10px;
+  background-repeat: repeat-x;
+  margin: 2rem 0;
+}
+
+@media screen and (max-width: 1200px) {
+  body {
+    --margine-pagina: 30px;
+    font-size: var(--m-font-size);
+  }
+  #grid-pagina {
+    display: block;
+    gap: 8px;
+  }
+  #grid-pagina > * {
+    gap: 8px;
+  }
+}
+@media screen and (max-width: 700px) {
+  body {
+    --margine-pagina: 20px;
+    font-size: var(--l-font-size);
+  }
+  #grid-pagina {
+    display: block;
+    gap: 5px;
+  }
+  #grid-pagina > * {
+    gap: 5px;
+  }
+  #container-orar {
+    overflow-x: auto;
+  }
+}

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta name="keywords" content="mogumoguceramics, ceramica, handmade">
+    <meta name="description" content="mogumoguceramics ofera creatii lucrate manual din ceramica">
+
+    <%- include("../fragmente/head") %>
+
+    <link rel="stylesheet" href="/resurse/css/produse.css" type="text/css"/>
+
+    <title>mogumoguceramics - Produse</title>
+
+    <script src="/resurse/js/produse.js"></script>
+</head>
+
+<body>
+
+<%- include("../fragmente/header") %>
+
+<main>
+
+    <!-- FILTRE -->
+    <section class="zona-filtre container py-3">
+        <div class="row g-3">
+            <!-- NUME -->
+            <div class="col-12 col-md-4">
+                <label for="inp-nume" class="form-label">Nume produs</label>
+                <input type="text" id="inp-nume" class="form-control" placeholder="caută produs">
+            </div>
+
+            <!-- CATEGORIE -->
+            <div class="col-12 col-md-4">
+                <label for="inp-categorie" class="form-label">Categorie</label>
+                <select id="inp-categorie" class="form-select">
+                    <option value="toate">Toate</option>
+                    <% for(let opt of locals.optiuni){ %>
+                        <option value="<%= opt.unnest.toLowerCase() %>">
+                            <%= opt.unnest %>
+                        </option>
+                    <% } %>
+                </select>
+            </div>
+
+            <!-- MATERIAL -->
+            <div class="col-12 col-md-4">
+                <label for="inp-material" class="form-label">Material</label>
+                <input list="lista-materiale" id="inp-material" class="form-control" placeholder="ex: lut">
+                <datalist id="lista-materiale">
+                    <% for(let m of locals.materiale){ %>
+                    <option value="<%= m.material %>">
+                        <% } %>
+                </datalist>
+            </div>
+
+            <!-- PREȚ (RANGE) -->
+            <div class="col-12 col-md-3">
+                <label class="form-label">Preț</label>
+
+                <div class="px-2">
+                    <div class="d-flex justify-content-between small">
+                        <span><%= pretMin %></span>
+                        <span><%= pretMax %></span>
+                    </div>
+
+                    <input type="range"
+                           class="form-range"
+                           id="inp-pret-min"
+                           min="<%= pretMin %>"
+                           max="<%= pretMax %>"
+                           value="<%= pretMin %>">
+
+                    <input type="range"
+                           class="form-range"
+                           id="inp-pret-max"
+                           min="<%= pretMin %>"
+                           max="<%= pretMax %>"
+                           value="<%= pretMax %>">
+
+                    <div class="text-center small mt-1">
+                        Interval: <span id="infoRange"></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SELECT MULTIPLE -->
+            <div class="col-12 col-md-2">
+                <label for="inp-preturi" class="form-label">Intervale preț</label>
+                <select multiple id="inp-preturi" class="form-select" style="height:5rem; width:10rem;">
+                    <%
+                    let minAbsolut = parseFloat(pretMin) || 0;
+                    let maxAbsolut = parseFloat(pretMax) || 100;
+
+                    let nrIntervale = 4;
+                    let pas = (maxAbsolut - minAbsolut) / nrIntervale;
+
+                    for (let i = 0; i < nrIntervale; i++) {
+                        let curentMin = (minAbsolut + i * pas).toFixed(2);
+                        let curentMax = (minAbsolut + (i + 1) * pas).toFixed(2);
+                    %>
+                    <option value="<%= curentMin %>:<%= curentMax %>">
+                        <%= curentMin %> - <%= curentMax %> lei
+                    </option>
+                    <%
+                    }
+                    %>
+                </select>
+            </div>
+
+            <!-- TEXT-AREA -->
+            <div class="col-12 col-md-2">
+                <div class="form-floating">
+                <textarea id="inp-descriere"
+                          class="form-control"
+                          style="height:7rem; width:12rem;"></textarea>
+                    <label for="inp-descriere">Cuvinte cheie (+ / -)</label>
+                </div>
+            </div>
+
+            <!-- CULOARE -->
+            <div class="col-12 col-md-5">
+                <label class="form-label">Culoare</label>
+                <div class="btn-group w-100 flex-wrap" role="group">
+                    <input type="radio" class="btn-check" name="gr_culoare" value="toate" id="c_toate" checked>
+                    <label class="btn btn-outline-secondary" for="c_toate">Toate</label>
+                    <% for(let c of locals.culori){ %>
+                        <input type="radio" class="btn-check" name="gr_culoare"
+                               value="<%= c.culoare.toLowerCase() %>"
+                               id="c_<%= c.culoare %>">
+                        <label class="btn btn-outline-secondary" for="c_<%= c.culoare %>">
+                            <%= c.culoare %>
+                        </label>
+                    <% } %>
+                </div>
+            </div>
+
+            <!-- PERSONALIZABIL -->
+            <div class="col-12 col-md-4 d-flex align-self-center">
+                <input type="checkbox" class="btn-check" id="inp-personalizabil">
+                <label class="btn btn-outline-secondary w-10" for="inp-personalizabil">
+                    Personalizabil
+                </label>
+            </div>
+
+            <!-- BUTOANE -->
+            <div class="col-12">
+                <div class="row g-2">
+
+                    <div class="col-6 col-md-auto">
+                        <button id="filtrare" class="btn btn-primary w-100"><i class="bi bi-funnel-fill"></i>Filtrează
+                        </button>
+                    </div>
+
+                    <div class="col-6 col-md-auto">
+                        <button id="resetare" class="btn btn-secondary w-100"><i
+                                    class="bi bi-arrow-counterclockwise"></i>Resetează
+                        </button>
+                    </div>
+
+                    <div class="col-6 col-md-auto">
+                        <button id="sortCrescNume" class="btn btn-success w-100"><i class="bi bi-sort-down-alt"></i>Sort
+                        </button>
+                    </div>
+
+                    <div class="col-6 col-md-auto">
+                        <button id="sortDescrescNume" class="btn btn-danger w-100"><i class="bi bi-sort-down"></i>Sort
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- PRODUSE -->
+
+    <section id="produse">
+        <h2>Produse</h2>
+        <div class="grid-produse">
+            <% for(let prod of locals.produse){ %>
+                <article
+                        id="articol_<%= prod.id %>"
+                        class="produs <%= prod.categorie.toLowerCase().replaceAll(' ', '-') %>">
+                    <a href="/produs/<%= prod.id %>" class="link-produs">
+
+                        <!-- TITLU -->
+                        <h3 class="titlu-prod">
+                            <span class="val-nume">
+                                <%= prod.denumire %>
+                            </span>
+                        </h3>
+
+
+                        <!-- CATEGORIE -->
+                        <p class="categorie">
+                            categorie:
+                            <span class="val-categorie">
+                                <%= prod.categorie %>
+                            </span>
+                        </p>
+
+
+                        <!-- DESCRIERE + IMAGINE -->
+                        <div class="continut-prod">
+                            <div class="descriere-box">
+                                <p class="descriere">
+                                    <span class="val-descriere">
+                                        <%= prod.descriere %>
+                                    </span>
+                                </p>
+                            </div>
+                            <img
+                                    src="/resurse/imagini/produse/<%= prod.imagine %>"
+                                    alt="<%= prod.denumire %>">
+
+                        </div>
+
+
+                        <!-- CARACTERISTICI -->
+                        <ul class="lista-caracteristici">
+                            <li>
+                                pret:
+                                <%
+                                    let areOferta = false;
+                                    let pretFinal = prod.pret;
+                                    let procentReducere = 0;
+
+                                    if (locals.ofertaActiva && locals.ofertaActiva.categorie && prod.categorie) {
+                                        if (prod.categorie.toLowerCase().trim() === locals.ofertaActiva.categorie.toLowerCase().trim()) {
+                                            areOferta = true;
+                                            procentReducere = locals.ofertaActiva.reducere || 0;
+                                            pretFinal = (parseFloat(prod.pret) * (1 - procentReducere / 100)).toFixed(2);
+                                        }
+                                    }
+
+                                if (areOferta) {
+                                %>
+                                    <span class="val-pret-vechi text-decoration-line-through text-muted-secondary small"><%= prod.pret %></span>
+                                    <span class="val-pret fw-bold text-danger ms-1"><%= pretFinal %></span> lei
+                                    <span class="badge bg-danger ms-1"
+                                          style="font-size: 0.75rem;">-<%= procentReducere %>% OFERTĂ!</span>
+                                <% } else { %>
+                                    <span class="val-pret"><%= prod.pret %></span> lei
+                                <% } %>
+                            </li>
+
+
+                            <li>
+                                culoare:
+                                <span class="val-culoare">
+                                    <%= prod.culoare %>
+                                </span>
+                            </li>
+
+
+                            <li>
+                                materiale:
+                                <span class="val-materiale">
+                                    <% if(Array.isArray(prod.materiale)){ %>
+                                        <%= prod.materiale.join(", ") %>
+                                    <% } else { %>
+                                        <%= prod.materiale %>
+                                    <% } %>
+                                </span>
+                            </li>
+
+
+                            <li>
+                                data_adaugare:
+                                <time datetime="<%= prod.data_adaugare %>">
+                                    <%= new Date(prod.data_adaugare)
+                                            .toLocaleDateString(
+                                                    "ro-RO",
+                                                    {
+                                                        weekday: "long",
+                                                        day: "numeric",
+                                                        month: "long",
+                                                        year: "numeric"
+                                                    }
+                                            ) %>
+
+                                </time>
+                            </li>
+
+                            <li>
+                                personalizabil:
+                                <span class="val-personalizabil">
+                                    <%= prod.personalizabil ? "da" : "nu" %>
+                                </span>
+                            </li>
+                        </ul>
+                    </a>
+
+                    <div class="zona-actiuni mt-2">
+                        <%- include("../fragmente/comparare", {prod: prod}) %>
+                    </div>
+
+                </article>
+
+            <% } %>
+
+        </div>
+
+    </section>
+    <dialog id="modal-produs"
+            style="border:none; border-radius:8px; padding:20px; max-width:500px; box-shadow:0 5px 15px rgba(0,0,0,0.3);">
+        <button id="btn-inchide-modal" class="btn btn-danger btn-sm" style="float:right;">X</button>
+        <div id="continut-modal"></div>
+    </dialog>
+</main>
+
+<%- include("../fragmente/footer") %>
+
+</body>
+</html>

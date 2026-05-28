@@ -1,0 +1,123 @@
+#produse a {
+  text-decoration: none !important;
+  color: var(--text-hover) !important;
+}
+#produse a:hover {
+  color: var(--secundar-light) !important;
+}
+#produse {
+  padding: 2rem;
+}
+#produse h2 {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+#produse .grid-produse {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+#produse .produs {
+  background-color: var(--fundal-dark);
+  color: var(--text-hover);
+  border: 1px solid var(--secundar-light);
+  border-radius: 18px;
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+#produse .produs:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.18);
+}
+#produse .produs .titlu-prod {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.4rem;
+}
+#produse .produs .categorie {
+  margin: 0 0 1rem 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+#produse .produs .continut-prod {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+#produse .produs .descriere-box {
+  flex: 1;
+}
+#produse .produs .descriere {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  text-align: justify;
+}
+#produse .produs img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border: 1px solid var(--secundar-light);
+  border-radius: 10%;
+  display: block;
+}
+#produse .produs .lista-caracteristici {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+#produse .produs .lista-caracteristici li {
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+  font-size: 0.95rem;
+}
+
+.range-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.range-min, .range-max {
+  font-weight: bold;
+  min-width: 50px;
+  text-align: center;
+}
+
+.slider-container {
+  position: relative;
+  width: 300px;
+  height: 30px;
+}
+
+.slider-track {
+  position: absolute;
+  width: 100%;
+  height: 8px;
+  border-radius: 999px;
+}
+
+.slider-container input[type=range] {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  pointer-events: none;
+  appearance: none;
+  background: transparent;
+}
+
+.slider-container input[type=range]::-webkit-slider-thumb {
+  pointer-events: all;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  background: var(--buton);
+  border-radius: 50%;
+  cursor: pointer;
+}
